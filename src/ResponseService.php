@@ -1,6 +1,6 @@
 <?php
 
-namespace Migunov\ResponseService;
+namespace Migunov\Services;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;

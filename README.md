@@ -2,14 +2,12 @@
 
 Every day useful services for Laravel.
 
-**Installing**
+### Installing
 ```bash
 composer require migunov/laravel-services
 ```
 
-**ResponseService**
-Make right answers for API.
-
+### Use
 ```php
 Migunov\Services\ResponseService::json(
         array $data, // Response Data for a client.
@@ -17,38 +15,25 @@ Migunov\Services\ResponseService::json(
         int $status = Response::HTTP_OK // the HTTP status
     ): JsonResponse
 ```
-
-*Example of send Response*
 ```php
-use Migunov\Services\ResponseService;
+Migunov\Services\Helper::fileExtensionFromMime(string $contentType): string
 
-class ProductController extends Controller
-{
-    public function index(
-        ProductsRequest $request,
-        ProductsAction $action
-    ): JsonResponse {
-        $params = $request->validated();
+Migunov\Services\Helper::getMetaTags(string $url): array
 
-        return ResponseService::json(
-            $action->handle($params), // Data for a client.
-            ['filters' => 'none'] // Additional paprameters for debugging.
-        );
-    }
-}
-```
+Migunov\Services\Helper::host(string $url): string
 
-*Example of response*
-```json
-{
-    "meta": {
-        "timestamp": 1708168352,
-        "total": 100,
-        "count": 45
-        "params": {
-            "filters": "none"
-        }
-    },
-    "data": [...]
-}
+Migunov\Services\Helper::htmlCut($text, $max_length): string // Dangerous!
+
+Migunov\Services\Helper::httpClient(): PendingRequest
+
+Migunov\Services\Helper::sanitizeData(array $data): array
+
+Migunov\Services\Helper::socialName(string $url): string
+
+Migunov\Services\Helper::stringToArray(
+    string $value,
+    string $separator = ','
+): array
+
+Migunov\Services\Helper::timeFormat(int $seconds): string // Only English
 ```

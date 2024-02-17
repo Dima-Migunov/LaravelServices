@@ -1,4 +1,5 @@
 /.phpunit.cache
+/tests
 /vendor
 .env
 .env.backup
@@ -7,6 +8,8 @@
 Homestead.json
 Homestead.yaml
 auth.json
+composer.lock
+phpunit.xml
 /.fleet
 /.idea
 /.vscode
