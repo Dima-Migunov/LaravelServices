@@ -1,0 +1,18 @@
+{
+    "name": "migunov/response-service",
+    "description": "ResponseService make right responses.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Migunov\\ResponseService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitri Migunov",
+            "email": "dmitri.migunov@gmail.com"
+        }
+    ],
+    "require": {}
+}
