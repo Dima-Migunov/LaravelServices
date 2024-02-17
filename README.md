@@ -2,12 +2,12 @@
 
 Every day useful services for Laravel.
 
-###Installing
+**Installing**
 ```bash
 composer require migunov/laravel-services
 ```
 
-###ResponseService
+**ResponseService**
 Make right answers for API.
 
 ```php
