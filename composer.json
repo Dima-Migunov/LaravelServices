@@ -1,11 +1,11 @@
 {
-    "name": "migunov/response-service",
-    "description": "ResponseService make right responses.",
+    "name": "migunov/laravel-services",
+    "description": "Little Useful Services for Laravel",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Migunov\\ResponseService\\": "src/"
+            "Migunov\\Services\\": "src/"
         }
     },
     "authors": [
