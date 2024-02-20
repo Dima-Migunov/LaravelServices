@@ -37,3 +37,12 @@ Migunov\Services\Helper::stringToArray(
 
 Migunov\Services\Helper::timeFormat(int $seconds): string // Only English
 ```
+
+```php
+Migunov\Services\ImageService::resize(
+        string $path, // Storage path to image file.
+        int $width = 1200,
+        int $height = 600,
+        ?string $targetPath = null // Storage path to resized image file or will be replaced $path
+    ): void
+```
