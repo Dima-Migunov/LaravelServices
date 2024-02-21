@@ -5,9 +5,12 @@ namespace Migunov\Services;
 use Exception;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManager;
+use Migunov\Services\Traits\WithImageFromUrlPage;
 
 class ImageService
 {
+    use WithImageFromUrlPage;
+
     public const MAX_WIDTH = 1200;
     public const MAX_HEIGHT = 600;
 
