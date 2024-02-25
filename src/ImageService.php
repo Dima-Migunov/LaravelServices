@@ -36,16 +36,21 @@ class ImageService
             return;
         }
 
+        if ($width == 0 && $height == 0) {
+            $width = $image->width();
+            $height = $image->height();
+        }
+
         if ($width < 0) {
             $width = $image->width();
         }
 
-        if ($width > self::MAX_WIDTH) {
-            $width = self::MAX_WIDTH;
-        }
-
         if ($height < 0) {
             $height = $image->height();
+        }
+
+        if ($width > self::MAX_WIDTH) {
+            $width = self::MAX_WIDTH;
         }
 
         if ($height > self::MAX_HEIGHT) {
