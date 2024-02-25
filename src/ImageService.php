@@ -36,7 +36,7 @@ class ImageService
             return;
         }
 
-        if ($width <= 0) {
+        if ($width < 0) {
             $width = $image->width();
         }
 
@@ -44,7 +44,7 @@ class ImageService
             $width = self::MAX_WIDTH;
         }
 
-        if ($height <= 0) {
+        if ($height < 0) {
             $height = $image->height();
         }
 
@@ -52,7 +52,11 @@ class ImageService
             $height = self::MAX_HEIGHT;
         }
 
-        if ($image->width() >= $image->height()) {
+        if ($height == 0) {
+            $image->scale(width:$width)->save($target, 90);
+        } elseif ($width == 0) {
+            $image->scale(height:$height)->save($target, 90);
+        } elseif ($image->width() >= $image->height()) {
             $image->scale(width:$width)->save($target, 90);
         } else {
             $image->scale(height:$height)->save($target, 90);
