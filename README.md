@@ -16,6 +16,7 @@ Migunov\Services\ResponseService::json(
     ): JsonResponse
 ```
 ```php
+Migunov\Services\Helper::fileExtension(string $path): string
 Migunov\Services\Helper::fileExtensionFromMime(string $contentType): string
 
 Migunov\Services\Helper::getMetaTags(string $url): array
