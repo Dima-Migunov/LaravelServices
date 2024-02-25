@@ -12,6 +12,14 @@ class Helper
 {
     public const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36';
 
+    /**
+     * Extract file extension from path. For example: "storage/stores/logo.svg" -> ".svg"
+     */
+    public static function fileExtension(string $path): string
+    {
+        return preg_replace('#.+(\..+)$#', '$1', $path);
+    }
+
     public static function fileExtensionFromMime(string $contentType): string
     {
         if (strpos($contentType, 'image/') === false) {
